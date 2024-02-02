@@ -147,7 +147,7 @@ async function handleScheduling() {
 		toast.clear()
 		const { data, errors } = await services.schedulings.create({
 			corretor_id: corretorSelecionado.value,
-            //cliente_id: ,
+            //cliente_id: getCurrentUser, //resgatar dado via variavel global ao fazer o login
             horaInicio: horaInicioSelecionada.value,
             horaFinal: horaInicioSelecionada.value,
 			status: "ATIVO"
@@ -170,31 +170,31 @@ async function handleScheduling() {
 	}
 }
 
-// const verificaConflito = (corretorSelecionado: string, horaInicioSelecionada: string, horaFinalSelecionada: string) => {
+const verificaConflito = (corretorSelecionado: string, horaInicioSelecionada: string, horaFinalSelecionada: string) => {
 
-// 	const corretorID = corretorSelecionado
-// 	const horaInicio = Date.parse(horaInicioSelecionada)
-// 	const horaFinal = Date.parse(horaFinalSelecionada)
+	const corretorID = corretorSelecionado
+	const horaInicio = Date.parse(horaInicioSelecionada)
+	const horaFinal = Date.parse(horaFinalSelecionada)
 
-// 	for (const agendamento of listaAgendamentos) {
-// 		if (agendamento.corretor_id === corretorID) {
-// 			const horaInicioAgendamento = new Date(agendamento.horaInicio);
-// 			const horaFinalAgendamento = new Date(agendamento.horaFinal);
+	for (const agendamento of listaAgendamentos) {
+		if (agendamento.corretor_id === corretorID) {
+			const horaInicioAgendamento = new Date(agendamento.horaInicio);
+			const horaFinalAgendamento = new Date(agendamento.horaFinal);
 
-// 			const horaInicioExternaDate = new Date(horaInicio);
-// 			const horaFinalExternaDate = new Date(horaFinal);
+			const horaInicioExternaDate = new Date(horaInicio);
+			const horaFinalExternaDate = new Date(horaFinal);
 
-// 			if (
-// 				(horaInicioExternaDate >= horaInicioAgendamento && horaInicioExternaDate < horaFinalAgendamento) ||
-// 				(horaFinalExternaDate > horaInicioAgendamento && horaFinalExternaDate <= horaFinalAgendamento)
-// 			) {
-// 				alert("Conflito detectado! O corretor já possui um agendamento neste horário.");
-// 				cleanData()
-// 				return;
-// 			}
-// 		}
-// 	}
-// }
+			if (
+				(horaInicioExternaDate >= horaInicioAgendamento && horaInicioExternaDate < horaFinalAgendamento) ||
+				(horaFinalExternaDate > horaInicioAgendamento && horaFinalExternaDate <= horaFinalAgendamento)
+			) {
+				alert("Conflito detectado! O corretor já possui um agendamento neste horário.");
+				cleanData()
+				return;
+			}
+		}
+	}
+}
 
 async function getCorretor() {
 	try {

@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "01bad0d7-ce94-49cf-87be-5c5ddf7df999",
+		"name": "BP Reserva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1501256"
+	},
+	"item": [
+		{
+			"name": "Status",
+			"item": [
+				{
+					"name": "Pegar o status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhYjc1OWY4LWYyMzgtNGZmOS1hZTkxLWVlMTU1ODk4MjMyOSIsImVtYWlsIjoiaWd1aW5AaWd1aW4ubWUiLCJuYW1lIjoiSWdvciBIYWxmZWxkIiwiaWF0IjoxNjA4NTA2ODAwfQ.AXBHWYY1hioeBXQfhxpI9uBGDH3shKqGgWE2JuTOsh4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Apikey",
+			"item": [
+				{
+					"name": "Checar se a apikey existe",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/apikey/exists?apikey=fcd5015c-10d3-4e9c-b395-ec7ed8850165",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"apikey",
+								"exists"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "fcd5015c-10d3-4e9c-b395-ec7ed8850165"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Fazer login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"renatochristian@outlook.com\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar novo usuário",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NzRiNzYwLTIyZTItNDE2NS05NDJhLWE4MDcwODJmNDNhNCIsImVtYWlsIjoiZXZhbi55b3VAZ21haWwuY29tIiwibmFtZSI6IkV2YW4gWW91IiwiaWF0IjoxNjA5ODExOTc4fQ.4M4u5n7n8NMfsNDWNAeLw8q20PBQFFfRHicbwT8r8W8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Lucia Gratao\",\n    \"email\": \"luciagratao@outlook.com\",\n    \"telephone\": \"31991377588\",\n    \"profile\": \"cliente\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Pegar os dados do usuário logado",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NzRiNzYwLTIyZTItNDE2NS05NDJhLWE4MDcwODJmNDNhNCIsImVtYWlsIjoiZXZhbi55b3VAZ21haWwuY29tIiwibmFtZSI6IkV2YW4gWW91IiwiaWF0IjoxNjA5ODExOTc4fQ.4M4u5n7n8NMfsNDWNAeLw8q20PBQFFfRHicbwT8r8W8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gerar uma nova apiKey",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NzRiNzYwLTIyZTItNDE2NS05NDJhLWE4MDcwODJmNDNhNCIsImVtYWlsIjoiZXZhbi55b3VAZ21haWwuY29tIiwibmFtZSI6IkV2YW4gWW91IiwiaWF0IjoxNjA5ODExOTc4fQ.4M4u5n7n8NMfsNDWNAeLw8q20PBQFFfRHicbwT8r8W8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/users/me/apikey",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"me",
+								"apikey"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feedbacks",
+			"item": [
+				{
+					"name": "Listar todos os agendamentos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NzRiNzYwLTIyZTItNDE2NS05NDJhLWE4MDcwODJmNDNhNCIsImVtYWlsIjoiZXZhbi55b3VAZ21haWwuY29tIiwibmFtZSI6IkV2YW4gWW91IiwiaWF0IjoxNjA5ODExOTc4fQ.4M4u5n7n8NMfsNDWNAeLw8q20PBQFFfRHicbwT8r8W8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"fcd5015c-10d3-4e9c-b395-ec7ed8850165\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/scheduling",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"scheduling"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar um agendamento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"corretor_id\": \"fcd5015c-10d3-4e9c-b395-ec7ed8850165\",\n    \"cliente_id\": \"fcd5015c-10d3-4e9c-b395-ec7ed8850165\",\n    \"horaInicio\": \"1706900400000\",\n    \"horaFinal\": \"1706904000000\",\n    \"status\": \"ativo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/scheduling/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"scheduling",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

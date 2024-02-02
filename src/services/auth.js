@@ -1,4 +1,4 @@
-//import { setCurrentUser } from "../stores/user"
+import { setCurrentUser } from "../stores/user"
 
 export default (httpClient) => ({
     register: async ({ name, email, telephone, profile, password }) => {
@@ -37,7 +37,7 @@ export default (httpClient) => ({
             }
         }
 
-		//setCurrentUser()
+		setCurrentUser(email)
 
         return {
             data: response.data,

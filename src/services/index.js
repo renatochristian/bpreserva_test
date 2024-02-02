@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { useRouter } from "vue-router";
-import { UserModule } from '..stores/index'
 import AuthService from './auth'
 import UsersService from './users'
 import SchedulingsService from './schedulings'
@@ -14,16 +13,6 @@ const API_ENVS = {
 const httpClient = axios.create({
     baseURL: API_ENVS.local
 })
-
-// httpClient.interceptors.request.use((config) => {
-//     const token = window.localStorage.getItem('token')
-// 	console.log("passou pelo token",token)
-//     if (token) {
-// 		config.headers.common.Authorization = `Bearer ${token}`
-// 		console.log("auth",config.headers.common.Authorization)
-//     }
-//     return config
-// })
 
 httpClient.interceptors.response.use(
     (response) => response,

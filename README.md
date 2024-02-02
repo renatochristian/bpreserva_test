@@ -1,68 +1,65 @@
-# reservabp
+# BPReserva
 
-This template should help get you started developing with Vue 3 in Vite.
+Projeto de teste para entrega do BPReserva, um sistema de cadastro de clientes e corretores para agendamento de reuniões
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Funcionalidades solicitadas
 
-## Type Support for `.vue` Imports in TS
+Observação: Nesse desafio persista os dados da maneira como preferir, pode usar um backend próprio, um Baas ou o próprio localstorage 
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+Desafio
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1 - Deverá ser criado um CRUD de cadastro de usuários. Os usuários do Reserva BP podem ser Corretores de Seguro ou Clientes, utilize Vuejs; 
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+2 - Deverá ser criado uma tela de login para gerenciar a autenticação; 
 
-## Project Setup
 
-```sh
-npm install
-```
+4 - Deverá ser criado um sistema de agendamento entre Clientes e Corretores de Seguro:
+●	Esse sistema poderá agendar reuniões de 30 minutos a 2 horas;
+●	O Cliente escolhe o Consultor e a Data e a Duração que deseja agendar;
+●	Caso um Cliente tente agendar em um horário ocupado com determinado Corretor de Seguro, deve receber uma mensagem notificando que o Corretor está ocupado;
+●	Um Corretor de Seguro não pode agendar um horário;
+5 - Utilize alguma biblioteca comum de de estilização(Chakra UI, Material UI, Tailwind) tarefa 1 – configurar tailwind - pronto
+6 - Utilize SSR – ainda não
+7 - Crie um gerenciamento de erros amigável para o usuário - ???
+8 - Utilize Composition API - tentando
+9 - O desafio deverá ser feito em Typescript; fudeu
 
-### Compile and Hot-Reload for Development
+10 - Testes; - nao
 
-```sh
-npm run dev
-```
+11 - Faça um vídeo de no máximo 5 minutos mostrando o funcionamento da aplicação e justificando suas escolhas;
 
-### Type-Check, Compile and Minify for Production
+12 - Faça uma Documentação no README da aplicação;
 
-```sh
-npm run build
-```
+13 - Coloque seu código no Github.
+Observação: Nesse desafio persista os dados da maneira como preferir, pode usar um backend próprio, um Baas ou o próprio localstorage 
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Desafio
 
-```sh
-npm run test:unit
-```
+1 - Deverá ser criado um CRUD de cadastro de usuários. Os usuários do Reserva BP podem ser Corretores de Seguro ou Clientes, utilize Vuejs; 
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
 
-```sh
-npm run test:e2e:dev
-```
+2 - Deverá ser criado uma tela de login para gerenciar a autenticação; 
+tarefa 1 – Visual Pronto
+tarefa 2 – funcionalidade ????
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+4 - Deverá ser criado um sistema de agendamento entre Clientes e Corretores de Seguro:
+●	Esse sistema poderá agendar reuniões de 30 minutos a 2 horas;
+●	O Cliente escolhe o Consultor e a Data e a Duração que deseja agendar;
+●	Caso um Cliente tente agendar em um horário ocupado com determinado Corretor de Seguro, deve receber uma mensagem notificando que o Corretor está ocupado;
+●	Um Corretor de Seguro não pode agendar um horário;
+5 - Utilize alguma biblioteca comum de de estilização(Chakra UI, Material UI, Tailwind) tarefa 1 – configurar tailwind - pronto
+6 - Utilize SSR – ainda não
+7 - Crie um gerenciamento de erros amigável para o usuário - ???
+8 - Utilize Composition API - tentando
+9 - O desafio deverá ser feito em Typescript; fudeu
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+10 - Testes; - nao
 
-```sh
-npm run build
-npm run test:e2e
-```
+11 - Faça um vídeo de no máximo 5 minutos mostrando o funcionamento da aplicação e justificando suas escolhas;
 
-### Lint with [ESLint](https://eslint.org/)
+12 - Faça uma Documentação no README da aplicação;
 
-```sh
-npm run lint
-```
+13 - Coloque seu código no Github.

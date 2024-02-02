@@ -52,10 +52,6 @@
 					<div class="space-y-2 mb-4">
 						<div class="flex gap-2">
 							<label for="password" class="text-white">Senha:</label>
-							<!-- <button @click="switchPassword">
-								<EyeIcon v-if="passwordFieldType === 'password'" class="w-4" />
-								<EyeSlashIcon v-if="passwordFieldType === 'text'" class="w-4" />
-							</button> -->
 						</div>
 						<input type="password" id="password" class="px-2 py-1 w-full text-black"
 							v-model="state.password.value" />
