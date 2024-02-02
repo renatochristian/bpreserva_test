@@ -58,4 +58,5 @@ Adições futuras
  * variaveis globais ao projeto (setCurrentUser);
  * Finalizar o cadastro de agendamentos e controle de telas (Corretor apenas acessa os agendamentos para seu usuário, cliente acessa apenas os agendamentos criados por ele mesmo)
  * controle de rotas e autenticação (o projeto nao impede que as outras telas sejam acessadas sem o login do usuário, imcompleto)
-
+ * testes na aplicação (não foram realizados testes devido a falta de avanço no projeto para chegar neles)
+ * Typescript (falta de familiaridade no uso)
