@@ -13,19 +13,22 @@ Desafio
 1 - Deverá ser criado um CRUD de cadastro de usuários. Os usuários do Reserva BP podem ser Corretores de Seguro ou Clientes, utilize Vuejs; 
 Crud criado, funções de remove e update a serem reimplementadas usando backend do docker
 
-2 - Deverá ser criado uma tela de login para gerenciar a autenticação; 
-- criado, não consegui criar um controle de rotas obrigatório dentro da aplicação
+2 - Deverá ser criado uma tela de login para gerenciar a autenticação;  (criado, não consegui criar um controle de rotas obrigatório dentro da aplicação)
 
-4 - Deverá ser criado um sistema de agendamento entre Clientes e Corretores de Seguro:
-●	Esse sistema poderá agendar reuniões de 30 minutos a 2 horas; - verificado
-●	O Cliente escolhe o Consultor e a Data e a Duração que deseja agendar; - verificado
-●	Caso um Cliente tente agendar em um horário ocupado com determinado Corretor de Seguro, deve receber uma mensagem notificando que o Corretor está ocupado; - verificado
-●	Um Corretor de Seguro não pode agendar um horário; - não implementado
+4 Deverá ser criado um sistema de agendamento entre Clientes e Corretores de Seguro:
+ - Esse sistema poderá agendar reuniões de 30 minutos a 2 horas; - verificado
+ - O Cliente escolhe o Consultor e a Data e a Duração que deseja agendar; - verificado
+ - Caso um Cliente tente agendar em um horário ocupado com determinado Corretor de Seguro, deve receber uma mensagem notificando que o Corretor está ocupado; - verificado
+ - Um Corretor de Seguro não pode agendar um horário; - não implementado
 
 5 - Utilize alguma biblioteca comum de de estilização(Chakra UI, Material UI, Tailwind) - utilizado
+
 6 - Utilize SSR – usado
+
 7 - Crie um gerenciamento de erros amigável para o usuário - implementado toasts para aviso ao usuário e redirect para login em caso de acesso a paginas inexistentes, sem page 404 desenvolvida
+
 8 - Utilize Composition API - utilizado
+
 9 - O desafio deverá ser feito em Typescript; - não utilizado
 
 10 - Testes; - nao realizado
