@@ -47,12 +47,12 @@
 			"name": "Apikey",
 			"item": [
 				{
-					"name": "Checar se a apikey existe",
+					"name": "Checar se o id existe",
 					"request": {
 						"method": "HEAD",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/apikey/exists?apikey=fcd5015c-10d3-4e9c-b395-ec7ed8850165",
+							"raw": "http://localhost:3000/apikey/exists?id=eab759f8-f238-4ff9-ae91-ee155898232",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -64,8 +64,8 @@
 							],
 							"query": [
 								{
-									"key": "apikey",
-									"value": "fcd5015c-10d3-4e9c-b395-ec7ed8850165"
+									"key": "id",
+									"value": "eab759f8-f238-4ff9-ae91-ee155898232"
 								}
 							]
 						}
@@ -84,7 +84,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"renatochristian@outlook.com\",\n    \"password\": \"1234\"\n}",
+							"raw": "{\n    \"email\": \"luciagratao@outlook.com\",\n    \"password\": \"1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -119,7 +119,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Lucia Gratao\",\n    \"email\": \"luciagratao@outlook.com\",\n    \"telephone\": \"31991377588\",\n    \"profile\": \"cliente\",\n    \"password\": \"1234\"\n}",
+							"raw": "{\n\t\"name\": \"Gato nou\",\n    \"email\": \"gato@gato.com\",\n    \"telephone\": \"31999999999\",\n    \"profile\": \"CLIENTE\",\n    \"password\": \"1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -156,7 +156,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4NzRiNzYwLTIyZTItNDE2NS05NDJhLWE4MDcwODJmNDNhNCIsImVtYWlsIjoiZXZhbi55b3VAZ21haWwuY29tIiwibmFtZSI6IkV2YW4gWW91IiwiaWF0IjoxNjA5ODExOTc4fQ.4M4u5n7n8NMfsNDWNAeLw8q20PBQFFfRHicbwT8r8W8",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI5NjRiNzFkLWZlMTYtNDM4ZS05OWI0LTAxOWExMTBlZDU1YiIsImVtYWlsIjoicmVuYXRvQHJlbmF0by5jb20iLCJuYW1lIjoiY2hyaXN0aWFuIG1pcmFuZGEiLCJpYXQiOjE3MDY4NTU1NzZ9.KIA7-Qodz71idFDeJMjON1Pm2FpPSk7z7PWiFFtzlJc",
 								"type": "text"
 							}
 						],
@@ -205,11 +205,51 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Listar todos os usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/readAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"readAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar todos os corretores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/getCorretor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"getCorretor"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
 		{
-			"name": "Feedbacks",
+			"name": "Schedulings",
 			"item": [
 				{
 					"name": "Listar todos os agendamentos",
@@ -227,7 +267,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"user_id\": \"fcd5015c-10d3-4e9c-b395-ec7ed8850165\"\n}",
+							"raw": "{\n    \"corretor_id\": \"fcd5015c-10d3-4e9c-b395-ec7ed8850165\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -235,14 +275,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/scheduling",
+							"raw": "http://localhost:3000/scheduling/readAll",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"scheduling"
+								"scheduling",
+								"readAll"
 							]
 						}
 					},
@@ -255,7 +296,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"corretor_id\": \"fcd5015c-10d3-4e9c-b395-ec7ed8850165\",\n    \"cliente_id\": \"fcd5015c-10d3-4e9c-b395-ec7ed8850165\",\n    \"horaInicio\": \"1706900400000\",\n    \"horaFinal\": \"1706904000000\",\n    \"status\": \"ativo\"\n}",
+							"raw": "{\n    \"corretor_id\": \"f898a61c-43be-49f0-a88f-5b79bc6c2510\",\n    \"cliente_id\": \"812eec22-e95e-4d32-bcfa-ecb0ac9a483f\",\n    \"horaInicio\": \"1706968800000\",\n    \"horaFinal\": \"1706971500000\",\n    \"status\": \"ativo\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -263,7 +304,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/scheduling/create",
+							"raw": "http://localhost:3000/scheduling/register",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -271,7 +312,7 @@
 							"port": "3000",
 							"path": [
 								"scheduling",
-								"create"
+								"register"
 							]
 						}
 					},
